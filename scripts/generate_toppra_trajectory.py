@@ -97,11 +97,20 @@ class ToppraTrajectory():
 
             for j in range(0, dof):
                 temp_point.positions.append(qs_sample[i,j])
-                temp_point.velocities.append(qs_sample[i,j])
-                temp_point.accelerations.append(qs_sample[i,j])
+                temp_point.velocities.append(qds_sample[i,j])
+                temp_point.accelerations.append(qdds_sample[i,j])
 
             temp_point.time_from_start = rospy.Duration.from_sec(i/f)
             joint_trajectory.points.append(temp_point)
+
+        # Add last point with zero velocity and acceleration
+        last_point = JointTrajectoryPoint()
+        for i in range(0, dof):
+            last_point.positions.append(qs_sample[n-1,i])
+            last_point.velocities.append(0.0)
+            last_point.accelerations.append(0.0)
+        last_point.time_from_start = rospy.Duration.from_sec((n-1)/f)
+        joint_trajectory.points.append(last_point)
 
         return joint_trajectory
 
