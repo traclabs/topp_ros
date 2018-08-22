@@ -1,0 +1,25 @@
+<package>
+  <name>topp_ros</name>
+  <version>1.0.0</version>
+  <description>This package provides with ROS interface for TOPP and TOPP-RA path parametrization methods.</description>
+
+  <maintainer email="antun.ivanovic@fer.hr">Antun Ivanovic</maintainer>
+
+  <license>ASL 2.0</license>
+
+  <author>Tomislav Haus</author>
+  <author>Matko Orsag</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>trajectory_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  
+  <run_depend>message_generation</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>trajectory_msgs</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+
+</package>
