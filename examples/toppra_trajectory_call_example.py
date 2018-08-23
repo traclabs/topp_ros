@@ -39,7 +39,7 @@ class RequestTrajectory():
         for i in range(0, len(x)):
             waypoint.positions = [x[i], y[i], z[i], yaw[i]]
             waypoint.velocities = [2, 2, 2, 1]
-            waypoint.accelerations = [2, 2, 2, 1]
+            waypoint.accelerations = [1.25, 1.25, 1.25, 1]
 
             request.waypoints.points.append(copy.deepcopy(waypoint))
 
