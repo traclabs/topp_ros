@@ -1,0 +1,9 @@
+float64 r
+float64 angleStep
+float64 x0
+float64 y0
+float64 z0
+float64 zf
+float64 deltaZ
+---
+trajectory_msgs/JointTrajectory helix_points
